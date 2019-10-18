@@ -1,7 +1,7 @@
 <?php
 
-// update_option("generate_single_block_post_count", 0);
-function generatePostForHealthCare( $youtubeurl, $keyTakeAwayFirst = "" , $timestampFirst = "" , $textFirst = "" , $keyTakeAwaySecond = "" , $timestampSecond = "" , $textSecond = "" , $keyTakeAwayThird = "" , $timestampThird = "" , $textThird = "" , $keyTakeAwayFourth = "" , $timestampFourth = "" , $textFourth = "" , $keyTakeAwayFifth = "" , $timestampFifth = "" , $textFifth = "" , $keyTakeAwaySixth = "" , $timestampSixth = "" , $textSixth = "" , $keyTakeAwaySeventh = "" , $timestampSeventh = "" , $textSeventh = ""  ) {
+//update_option("generate_single_block_post_count", 0);
+function generatePostForHealthCare( $youtubeurl, $keyTakeAwayFirst = "" , $timestampFirst = "" , $textFirst = "" , $keyTakeAwaySecond = "" , $timestampSecond = "" , $textSecond = "" , $keyTakeAwayThird = "" , $timestampThird = "" , $textThird = "" , $keyTakeAwayFourth = "" , $timestampFourth = "" , $textFourth = "" , $keyTakeAwayFifth = "" , $timestampFifth = "" , $textFifth = "" , $keyTakeAwaySixth = "" , $timestampSixth = "" , $textSixth = "" , $keyTakeAwaySeventh = "" , $timestampSeventh = "" , $textSeventh = "", $keyTakeAwayEight = "" , $timestampEight = "" , $textEight = "", $keyTakeAwayNine = "" , $timestampNine = "" , $textNine = ""  ) {
     
     $functionIndex = get_option("generate_single_block_post_count", 0);
 
@@ -27,6 +27,12 @@ function generatePostForHealthCare( $youtubeurl, $keyTakeAwayFirst = "" , $times
     }
     if($keyTakeAwaySeventh || $textSeventh) {
         $keyTakeAways[] = array('key' => $keyTakeAwaySeventh, 'timestamp' => $timestampSeventh, 'text' => $textSeventh);    
+    }
+    if($keyTakeAwayEight || $textEight) {
+        $keyTakeAways[] = array('key' => $keyTakeAwayEight, 'timestamp' => $timestampEight, 'text' => $textEight);    
+    }
+    if($keyTakeAwayNine || $textNine) {
+        $keyTakeAways[] = array('key' => $keyTakeAwayNine, 'timestamp' => $timestampNine, 'text' => $textNine);    
     }
 
     $return = generateLayoutIpt( $functionIndex, $keyTakeAways, $youtubeurl );
@@ -56,10 +62,10 @@ function generateLayoutIpt( $id, $keyTakeAways, $youtubeurl ) {
     $linkWithOutSpan = '<a href="/?page_id=36">About us - page</a> ';
     $linkWithSpan = '<span style="color: #a5d666;"><a style="color: #a5d666;" href="/?page_id=36">About us - page</a></span> ';
     $rememberTxt = 'Please remember. Nothing in this Post can be used as a substitute for getting objective and professional advise from e.g. a medical doctor in case you experience any medical discomfort. Also remember that even by watching the Youtube videos on our platform you contribute to the Youtube revenues that the original creators will receive. By no means do we make any copyright infringements and we have the utmost respect for the original video creators. If you have any suggestions please contact us.';
-    $mpcImageId = '6417';
+    $mpcImageId = '8617';
     $mpcNextImageId = '8616';
     $thanksFontSize = 'font_size="12"';
-
+        
     // 0,1,2,3,4
     if($id < 5){
         // Template for ID: 6653, 6668, 6673, 6678, 6457
@@ -470,7 +476,8 @@ function generateLayoutIpt( $id, $keyTakeAways, $youtubeurl ) {
         $return .= '[mpc_icon_column preset="mpc_preset_42" layout="style_2" background_color="#ffffff" border_css="border-width:2px;border-color:#cea791;border-style:solid;border-radius:0px;" padding_css="padding:25px;" margin_divider="true" margin_css="margin-top:40px;" title_font_preset="preset_2" title_font_color="#555555" title_font_size="17" title_font_line_height="1.4" title_font_transform="uppercase" title_font_align="left" title="Key takeways" title_margin_divider="true" title_margin_css="margin-bottom:8px;" content_font_preset="mpc_preset_1" content_font_color="#a5a5a5" content_font_size="14" content_font_line_height="1.5" content_font_align="left" hover_border_css="border-color:#cea791;border-radius:0px;" mpc_icon__transition="fade" mpc_icon__icon="etl etl-heart" mpc_icon__icon_color="#402312" mpc_icon__icon_size="30" mpc_icon__background_color="#ffffff" mpc_icon__border_css="border-width:2px;border-color:#402312;border-style:solid;border-radius:0px;" mpc_icon__padding_css="padding:8px;" mpc_icon__margin_divider="true" mpc_icon__margin_css="margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:-15px;" mpc_icon__hover_border_css="border-color:#402312;" mpc_divider__disable="true" mpc_divider__width="10" mpc_divider__align="left" mpc_divider__content_padding_divider="true" mpc_divider__content_padding_css="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;" mpc_divider__lines_color="#dddddd" mpc_divider__padding_divider="true" mpc_divider__padding_css="padding-top:3px;padding-bottom:3px;"]'.$kopFormat.'[/mpc_icon_column][/vc_column][/vc_row][vc_row][vc_column width="1/4" css=".vc_custom_1563799691875{margin-bottom: 20px !important;}"][mpc_image image="'.$mpcNextImageId.'" padding_divider="true" margin_divider="true" image_size="100x100" image_opacity="100" image_border_css="border-radius:75px;" image_inner_border_gap="0" effect="none" image_hover_opacity="100"][/vc_column][vc_column width="3/4"][mpc_textblock content_width="100" font_preset="preset_2" '.$thanksFontSize.']'.$thanksText.' '.$linkWithSpan.' . '.$rememberTxt.'[/mpc_textblock][/vc_column][/vc_row]';
     }
 
-    return $return;    
+    return $return;
 
 }
 ?>
+
