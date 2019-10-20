@@ -46,44 +46,20 @@ function generatePostForBpv( $youtubeurl, $keyTakeAwayFirst = "" , $timestampFir
     return  $return;
 }
 
-function generatePath( $main, $category_1, $category_2, $category_3, $sub_1, $sub_1a, $sub_1b, $sub_1c, $sub_1d, $sub_1e, $sub_1f, $sub_1g, $sub_1h, $sub_1i ) {
-    $return = $main;
-
-    if( strtolower($main) == "wealth" ) {
-        if( strtolower($category_3) == "work" ) {
-            if( strtolower($sub_1f) == "general" || 
-                strtolower($sub_1f) == "career" || 
-                strtolower($sub_1f) == "entrepreneur" || 
-                strtolower($sub_1f) == "books" ) {
-                return 'Other';
-            }
-            else if( strtolower($sub_1f) == "books" ) {
-                return 'Books';
-            }
-        }
-        else if( strtolower($category_3) == "finance" ) {
-            if( strtolower($sub_1g) == "general" || strtolower($sub_1g) == "buying" ) {
-                return 'Finance';
-            }
-            else if( strtolower($sub_1g) == "selling" ) {
-                return 'Growing';
-            }
-            else if( strtolower($sub_1g) == "books" ) {
-                return 'Books';
-            }
-        }        
+function generatePath( $main, $category_1, $category_2, $category_3, $sub_1, $sub_1a, $sub_1b, $sub_1c, $sub_1d, $sub_1e, $sub_1f, $sub_1g, $sub_1h, $sub_1i ) {    
+    $return = "";
+    if( $main ) {
+        $return = $main;
     }
-    else if($category_1) {
-        $return = $category_1; 
+    if( $category_1 ) {
+        $return .= '>'.$category_1;
     }
-    // END    
-
     return $return;
 }
 
 function generateLayoutBpv( $id, $keyTakeAways, $youtubeurl ) {
     $thanksText = 'Thanks for using our key takeaways to learn something about BulletProof Ventures. For the best use of our platform we refer to the ';
-    $linkWithOutSpan = '<a href="/?page_id=36">About us - page</a> ';
+    $linkWithOutSpan = '<a href="/?page_id=6232">FAQ Videos - page</a> ';
     $linkWithSpan = '<span style="color: #a5d666;"><a style="color: #a5d666;" href="/?page_id=6232">FAQ Videos - page</a></span> ';
     $rememberTxt = 'Please remember. Nothing in this Post can be used as a substitute for getting objective and professional advise from e.g. an accountant, consultant in case you are in real financial dire straights. Also remember that even by watching the Youtube videos on our platform you contribute to the Youtube revenues that the original creators will receive. By no means do we make any copyright infringements and we have the utmost respect for the original video creators. If you have any suggestions please contact us.';
     $mpcImageId = '6078';

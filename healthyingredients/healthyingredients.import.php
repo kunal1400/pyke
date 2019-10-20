@@ -270,7 +270,7 @@ function generatePath( $main, $category_1, $category_2, $category_3, $sub_1, $su
 function generateLayout( $id, $keyTakeAways, $youtubeurl ) {
     $thanksText = 'Thanks for using our key takeaways to learn something about Healthy Ingredients. For the best use of our platform we refer to the ';
     $linkWithOutSpan = '<a href="/?page_id=742">About us - page</a>';
-    $linkWithSpan = '<span style="color: #a5d666;"><a style="color: #a5d666;" href="/?page_id=6232">FAQ Videos - page</a></span> ';
+    $linkWithSpan = '<span style="color: #a5d666;"><a style="color: #a5d666;" href="/?page_id=742">About - page</a></span> ';
     $rememberTxt = 'Please remember. Nothing in this Post can be used as a substitute for getting objective and professional medical advise from a medical doctor in case you experience any medical discomfort. Also remember that even by watching the Youtube videos on our platform you contribute to the Youtube revenues that the original creators will receive. By no means do we make any copyright infringements and we have the utmost respect for the original video creators. If you have any suggestions please contact us.';
     $mpcImageId = '6414';
     $mpcNextImageId = '6151';
@@ -436,7 +436,7 @@ function generateLayout( $id, $keyTakeAways, $youtubeurl ) {
         foreach ($keyTakeAways as $i => $keyTakeAway) {
             
             // Key take away creator
-            $keyTakeAwaysCheckbox = '<h4><i class="fa fa-check" style="font-size: 22px; color: #f6c6cc;"></i> <span style="color: #402312;">'.$keyTakeAway['key'].'</span></h4>';
+            $keyTakeAwaysCheckbox .= '<h4><i class="fa fa-check" style="font-size: 22px; color: #f6c6cc;"></i> <span style="color: #402312;">'.$keyTakeAway['key'].'</span></h4>';
 
             // If even
             if( $i%2 == 0 ) {
@@ -472,7 +472,7 @@ function generateLayout( $id, $keyTakeAways, $youtubeurl ) {
         foreach ($keyTakeAways as $i => $keyTakeAway) {
             
             // Key take away creator
-            $keyTakeAwaysCheckbox = '<h4><i class="fa fa-check" style="font-size: 22px; color: #b8d58f;"></i> <span style="color: #402312;">'.$keyTakeAway['key'].'</span></h4>';
+            $keyTakeAwaysCheckbox .= '<h4><i class="fa fa-check" style="font-size: 22px; color: #b8d58f;"></i> <span style="color: #402312;">'.$keyTakeAway['key'].'</span></h4>';
 
             // If even
             if( $i%2 == 0 ) {
@@ -492,7 +492,7 @@ function generateLayout( $id, $keyTakeAways, $youtubeurl ) {
         foreach ($keyTakeAways as $i => $keyTakeAway) {
                       
             // Key take away creator
-            $keyTakeAwaysCheckbox = '<h4><i class="fa fa-check" style="font-size: 22px; color: #b8d58f;"></i> <span style="color: #402312;">'.$keyTakeAway['key'].'</span></h4>';
+            $keyTakeAwaysCheckbox .= '<h4><i class="fa fa-check" style="font-size: 22px; color: #b8d58f;"></i> <span style="color: #402312;">'.$keyTakeAway['key'].'</span></h4>';
 
             // If even
             if( $i%2 == 0 ) {
@@ -542,7 +542,7 @@ function generateLayout( $id, $keyTakeAways, $youtubeurl ) {
         foreach ($keyTakeAways as $i => $keyTakeAway) {
                       
             // Key take away creator
-            $keyTakeAwaysCheckbox = '<h4><i class="fa fa-check" style="font-size: 22px; color: #cce0f2;"></i> <span style="color: #402312;">'.$keyTakeAway['key'].'</span></h4>';
+            $keyTakeAwaysCheckbox .= '<h4><i class="fa fa-check" style="font-size: 22px; color: #cce0f2;"></i> <span style="color: #402312;">'.$keyTakeAway['key'].'</span></h4>';
 
             // If even
             if( $i%2 == 0 ) {
@@ -562,7 +562,7 @@ function generateLayout( $id, $keyTakeAways, $youtubeurl ) {
         foreach ($keyTakeAways as $i => $keyTakeAway) {
 
             // Key take away creator
-            $keyTakeAwaysCheckbox = '<h4><i class="fa fa-check" style="font-size: 22px; color: #cce0f2;"></i> <span style="color: #402312;">'.$keyTakeAway['key'].'</span></h4>';
+            $keyTakeAwaysCheckbox .= '<h4><i class="fa fa-check" style="font-size: 22px; color: #cce0f2;"></i> <span style="color: #402312;">'.$keyTakeAway['key'].'</span></h4>';
 
             // If even
             if( $i%2 == 0 ) {
@@ -612,7 +612,7 @@ function generateLayout( $id, $keyTakeAways, $youtubeurl ) {
         foreach ($keyTakeAways as $i => $keyTakeAway) {
 
             // Key take away creator
-            $keyTakeAwaysCheckbox = '<h4><i class="fa fa-check" style="font-size: 22px; color: #cdcbce;"></i> <span style="color: #402312;">402312;">'.$keyTakeAway['key'].'</span></h4>';
+            $keyTakeAwaysCheckbox .= '<h4><i class="fa fa-check" style="font-size: 22px; color: #cdcbce;"></i> <span style="color: #402312;">402312;">'.$keyTakeAway['key'].'</span></h4>';
 
             // If even
             if( $i%2 == 0 ) {
@@ -632,7 +632,7 @@ function generateLayout( $id, $keyTakeAways, $youtubeurl ) {
         foreach ($keyTakeAways as $i => $keyTakeAway) {
 
             // Key take away creator
-            $keyTakeAwaysCheckbox = '<h4><i class="fa fa-check" style="font-size: 22px; color: #cdcbce;"></i> <span style="color: #402312;">'.$keyTakeAway['key'].'</span></h4>';
+            $keyTakeAwaysCheckbox .= '<h4><i class="fa fa-check" style="font-size: 22px; color: #cdcbce;"></i> <span style="color: #402312;">'.$keyTakeAway['key'].'</span></h4>';
 
             // If even
             if( $i%2 == 0 ) {
@@ -682,7 +682,7 @@ function generateLayout( $id, $keyTakeAways, $youtubeurl ) {
         foreach ($keyTakeAways as $i => $keyTakeAway) {
 
             // Key take away creator
-            $keyTakeAwaysCheckbox = '<h4><i class="fa fa-check" style="font-size: 22px; color: #cea791;"></i> <span style="color: #402312;">'.$keyTakeAway['key'].'</span></h4>';
+            $keyTakeAwaysCheckbox .= '<h4><i class="fa fa-check" style="font-size: 22px; color: #cea791;"></i> <span style="color: #402312;">'.$keyTakeAway['key'].'</span></h4>';
 
             // If even
             if( $i%2 == 0 ) {
@@ -702,7 +702,7 @@ function generateLayout( $id, $keyTakeAways, $youtubeurl ) {
         foreach ($keyTakeAways as $i => $keyTakeAway) {
 
             // Key take away creator
-            $keyTakeAwaysCheckbox = '<h4><i class="fa fa-check" style="font-size: 22px; color: #cea791;"></i> <span style="color: #402312;">'.$keyTakeAway['key'].'</span></h4>';
+            $keyTakeAwaysCheckbox .= '<h4><i class="fa fa-check" style="font-size: 22px; color: #cea791;"></i> <span style="color: #402312;">'.$keyTakeAway['key'].'</span></h4>';
 
             // If even
             if( $i%2 == 0 ) {
