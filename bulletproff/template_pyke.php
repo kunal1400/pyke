@@ -40,7 +40,11 @@ function get_string_between($string, $start, $end){
 
 function getWpBakeryStructure() {
 	$string = '[vc_row full_width="stretch_row_content" css=".vc_custom_1574438053794{margin-left: 40px !important;}"][vc_column width="1/6" offset="vc_hidden-sm vc_hidden-xs"][/vc_column][vc_column width="4/6" css=".vc_custom_1574695077279{margin-right: 0px !important;margin-left: 0px !important;}"]';
-	$query = new WP_Query( array( 'post_type' => 'post', 'post_status' => 'publish' ) );
+	$query = new WP_Query( array( 'post_type' => 'post', 
+		'post_status' => 'publish', 
+		'posts_per_page' => 12, 
+		'paged' => get_query_var('paged') ? get_query_var('paged') : 1 ) 
+	);
 	$posts = $query->posts;
 	$counter = 0;
 	$break_after = 3;
@@ -68,8 +72,18 @@ function getWpBakeryStructure() {
 			$string .= 	'[/vc_row_inner]';
 		}
 		++$counter;
-	}	
+	}
 	$string .= '[/vc_column][vc_column width="1/6"][vc_widget_sidebar sidebar_id="blog-sidebar"][/vc_column][/vc_row]';
+	$big = 999999999; // need an unlikely integer
+	$string .= '<div style="text-align: center;" id="paginationWrapper">';
+	$string .= paginate_links( array(
+	    'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+	    'format' => '?paged=%#%',
+	    'current' => max( 1, get_query_var('paged') ),
+	    'total' => $query->max_num_pages
+	) );
+	$string .= '</div>';	
+	wp_reset_postdata();
 	return $string;
 }
 ?>
