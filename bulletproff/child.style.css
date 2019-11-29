@@ -1,0 +1,55 @@
+#single-page .mpc-post h3.mpc-post__heading {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    max-width: 100%;
+    font-size: 16px;
+    color: #555555;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 1.25;
+    text-align: left;
+    text-transform: none;
+    font-family: "Raleway" !important;
+    font-weight: bold !important;
+    white-space: unset;
+}
+#single-page .mpc-post .mpc-post__content {
+    padding: 0;
+    white-space: unset;
+    background: no-repeat;
+}
+#single-page .mpc-post .mpc-post__description {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #555555;
+    font-family: "Raleway" !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    text-align: left;
+    text-transform: none;
+}
+#single-page .mpc-post .mpc-post__description p {
+    margin-bottom: 0;
+}
+#single-page .mpc-post__date {
+    color: #666;
+    font-weight: 500;
+    font-family: Poppins;
+    font-size: 12px;
+    text-align: left;
+    line-height: 30px;
+}
+#single-page .mpc-button {
+	background: none;
+}
+#single-page .mpc-button__content {
+	color: #666;
+    font-weight: 400;
+    font-family: Poppins;
+    text-align: left;
+    line-height: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    max-width: 100%;
+    font-size: 14px;	
+}

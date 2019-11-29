@@ -1,0 +1,29 @@
+.entry-header h3.entry-title {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    max-width: 100%;
+    font-size: 16px;
+    color: #555555;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 1.25;
+    text-align: left;
+    text-transform: none;
+    font-weight: bold !important;
+    white-space: unset;
+}
+.group-button-blog .text-social-share,
+span.comment-count {
+	display: none;
+}
+.entry-content.k2 {
+    text-align: left;
+}
+.entry-content.k2::before {
+    display: none;
+    border: none !important;
+}
+.entry-header .date-time.date-time-meta {
+    display: block;
+    text-align: left;
+}
